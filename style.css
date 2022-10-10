@@ -1,21 +1,91 @@
 body {
+    font: inherit;
+    font-family: "Arial", sans-serif;
     background-color: #053A3D;
 }
 
+ul {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 15px 0;
+    border-radius: 25px;
+    border: 1px solid #099FFF;
+    background-color: #1A2929;
+    box-shadow: 0 4px 8px 0 #00FFFF, 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+li {
+    margin: auto;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+li:after {
+    display: block;
+    content: '';
+    border-bottom: solid 1px #00FFFF;
+    padding-bottom: 1%;
+    transform: scaleX(0);
+    transition: transform 100ms ease-in-out;
+}
+
+li:hover:after {
+    transform: scaleX(1.25);
+}
+
 div {
-    height: 25px;
+    height: 8px;
+}
+
+footer{
+    position: absolute;
+    bottom: 1%;
+    right: -1%;
+    transform: translate(-50%, -50%);
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    margin: auto;
+}
+
+footer a:after {
+    display: block;
+    content: '';
+    border-bottom: solid 1px #00FFFF;
+    padding-bottom: 1%;
+    transform: scaleX(0);
+    transition: transform 100ms ease-in-out;
+}
+
+footer a:hover:after {
+    transform: scaleX(1.25);
 }
 
 .container {
     position: absolute;
-    top: 50%;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40%;
+    width: 99%;
     margin: auto;
     border: 3px solid #54E6E7;
     background-color: #AAC6C6;
-    box-shadow: 0px 0px 16px #AAC6C6;
+    box-shadow: 0 0 16px #AAC6C6;
 }
 
 .progress {
@@ -27,11 +97,11 @@ div {
 
 @keyframes progress {
     0% {
-        opacity: 0;
-        width: 0%;
+        opacity: 0.2;
+        width: 0;
     }
     100% {
-        opacity: 1;
+        opacity: 0.8;
         width: 100%;
     }
 }
